@@ -2,6 +2,8 @@
 
 Scenes for Node RED
 
+[![Build Status](https://travis-ci.org/denwilliams/node-red-contrib-scenes.svg?branch=master)](https://travis-ci.org/denwilliams/node-red-contrib-scenes)
+
 ## Use
 
 ```js
