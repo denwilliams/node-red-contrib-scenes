@@ -1,0 +1,9 @@
+{
+  "ambientDependencies": {
+    "express": "registry:dt/express#4.0.0+20160208031452",
+    "mime": "registry:dt/mime#0.0.0+20151204023458",
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#48c1e3c1d6baefa4f1a126f188c27c4fefd36bff",
+    "serve-static": "registry:dt/serve-static#1.7.1+20160104095738",
+    "when": "github:DefinitelyTyped/DefinitelyTyped/when/when.d.ts#cfc3e22a3d3e373903c8a4db515014ede84f9deb"
+  }
+}

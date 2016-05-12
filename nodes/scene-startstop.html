@@ -1,0 +1,63 @@
+<script type="text/x-red" data-template-name="scene start">
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="scene start">
+    <p>TODO - add help.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('scene start',{
+        category: "scene",
+        color: "#5882FA",
+        defaults: {
+            name: {value:''},
+            sceneId: {value:''}
+        },
+        inputs:0,
+        outputs:1,
+        //icon: "sun.png",
+        label: function() {
+            return this.name||"Scene start";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>
+
+
+
+<script type="text/x-red" data-template-name="scene stop">
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="scene stop">
+    <p>TODO - add help.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('scene stop',{
+        category: 'scene',
+        color:"#5882FA",
+        defaults: {
+            name: {value:''},
+            sceneId: {value:''}
+        },
+        inputs:0,
+        outputs:1,
+        //icon: "sun.png",
+        label: function() {
+            return this.name||"Scene stop";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>

@@ -1,0 +1,35 @@
+<script type="text/x-red" data-template-name="scene">
+    <div class="form-row node-input-sceneId">
+        <label for="node-input-sceneId"><i class="fa fa-bookmark"></i> Scene</label>
+        <input class="input-append-left" type="text" id="node-input-sceneId" placeholder="default" style="width: 40%;" >
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-tips">
+        Todo: add tips here
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="scene">
+    <p>Set scene.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('scene',{
+        category: "scene",
+        color: "#5882FA",
+        defaults: {
+            name: {},
+            sceneId: {}
+        },
+        inputs:1,
+        outputs:0,
+        icon: "hash.png",
+        align: "right",
+        label: function() {
+            return this.name || this.sceneId || 'Set scene';
+        }
+    });
+</script>

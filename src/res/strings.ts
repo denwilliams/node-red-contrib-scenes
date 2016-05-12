@@ -1,0 +1,5 @@
+module Strings {
+  
+}
+
+export = Strings;

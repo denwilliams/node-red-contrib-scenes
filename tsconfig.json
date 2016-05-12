@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "declaration": true,
+    "listFiles": false,
+    "outDir": "./"
+  },
+  "filesGlob": [
+    "typings/main.d.ts",
+    "nodes.d.ts",
+    "scenes.d.ts",
+    "src/**/*.ts"
+  ],
+  "files": [
+    "typings/main.d.ts",
+    "nodes.d.ts",
+    "scenes.d.ts",
+    "src/index.ts",
+    "src/lib/console-logger.ts",
+    "src/lib/index.ts",
+    "src/lib/index0.ts",
+    "src/lib/launcher.ts",
+    "src/lib/scene-flows.ts",
+    "src/lib/scene-manager_old.ts",
+    "src/lib/scene-manager.ts",
+    "src/lib/scene-storage.ts",
+    "src/lib/settings.ts",
+    "src/lib/starter.ts",
+    "src/lib/validate.ts",
+    "src/node-red.d.ts",
+    "src/nodes/current-scene.ts",
+    "src/nodes/scene-startstop.ts",
+    "src/nodes/scene.ts",
+    "src/res/index.ts",
+    "src/res/strings.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}

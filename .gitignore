@@ -31,3 +31,27 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+src/index.ts
+
+
+
+_lib
+_nodes
+
+typings/**/*
+typings/browser.d.ts
+# typings/main/**
+# typings/main.d.ts
+
+lib/**/*.js
+lib/**/*.js.map
+lib/**/*.d.ts
+
+res/**/*.js
+res/**/*.js.map
+res/**/*.d.ts
+
+nodes/**/*.js
+nodes/**/*.js.map
+nodes/**/*.d.ts
