@@ -49,6 +49,10 @@ res/**/*.js
 res/**/*.js.map
 res/**/*.d.ts
 
+test/**/*.js
+test/**/*.js.map
+test/**/*.d.ts
+
 nodes/**/*.js
 nodes/**/*.js.map
 nodes/**/*.d.ts

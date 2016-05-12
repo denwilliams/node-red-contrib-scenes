@@ -38,7 +38,8 @@
     "src/nodes/scene-startstop.ts",
     "src/nodes/scene.ts",
     "src/res/index.ts",
-    "src/res/strings.ts"
+    "src/res/strings.ts",
+    "src/test/index.ts"
   ],
   "atom": {
     "rewriteTsconfig": true
