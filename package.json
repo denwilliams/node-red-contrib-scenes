@@ -6,7 +6,7 @@
   "scripts": {
     "prepublish": "tsc",
     "postinstall": "typings install && tsc",
-    "test": "mocha --recursive && exit 1"
+    "test": "mocha --recursive"
   },
   "license": "MIT",
   "description": "## Use",
