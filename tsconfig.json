@@ -22,7 +22,6 @@
     "typings/main.d.ts",
     "nodes.d.ts",
     "scenes.d.ts",
-    "src/index.ts",
     "src/lib/console-logger.ts",
     "src/lib/index.ts",
     "src/lib/index0.ts",

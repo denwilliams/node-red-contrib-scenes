@@ -65,13 +65,10 @@ export class Starter {
 
     const app: express.Express = express(); // opts.app || express();
     const server: http.Server = http.createServer(app);
-    server['DEBUG'] = 'DEBUG';
 
     sceneManager.onChanged((scene: string) => {
       flows.changeFlow(scene);
     });
-
-    console.log('server', server);
 
     // Initialise the runtime with a server and settings
     this._RED.init(server, settings);

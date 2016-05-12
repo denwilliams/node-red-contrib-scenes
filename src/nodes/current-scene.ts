@@ -36,10 +36,6 @@ const nodeFactory : NodeRedNodes.NodeRegistration = function(RED: NodeRedNodes.I
 
     node.on('close', function() {
       node.log('Current scene node is closing: ' + config.id);
-      console.log(node);
-      for (var id in node) {
-        console.log(id, typeof(node[id]));
-      }
       scene.removeOnChanged(updateStatus);
     });
 
