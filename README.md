@@ -12,4 +12,4 @@ var nrScenes = require('node-red-contrib-scenes');
 nrScenes.start(RED, {port:3210});
 ```
 
-## [Documentation](http://www.denwilliams.net/node-red-contrib-scenes/doc/0.1.0/globals.html)
+## [Documentation](http://www.denwilliams.net/node-red-contrib-scenes/doc/0.1.0/)
