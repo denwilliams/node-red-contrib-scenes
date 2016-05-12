@@ -8,7 +8,6 @@
     "postinstall": "typings install && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Den Williams",
   "license": "MIT",
   "description": "## Use",
   "keywords": [
@@ -26,5 +25,17 @@
     "express": "^4.13.4",
     "when": "^3.7.7"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denwilliams/node-red-contrib-scenes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/denwilliams/node-red-contrib-scenes/issues"
+  },
+  "homepage": "https://github.com/denwilliams/node-red-contrib-scenes#readme",
+  "author": "Den Williams"
 }
