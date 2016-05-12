@@ -1,4 +1,4 @@
-const nodeFactory : NodeRedNodes.NodeRegistration = function(RED: NodeRedNodes.IRed) {
+function registerCurrentSceneNode(RED: NodeRedNodes.IRed) {
   // const thisNodeFactory: IThisNodeFactory = this;
   // console.log('thisNodeFactory', typeof thisNodeFactory, thisNodeFactory);
 //  const globalContext: IGlobalContext = thisNodeFactory.context().global;
@@ -16,7 +16,7 @@ const nodeFactory : NodeRedNodes.NodeRegistration = function(RED: NodeRedNodes.I
   //   });
   // }
 
-  function Node(config: any) {
+  function CurrentSceneNode(config: any) {
     console.log('NODE scene current', config.id);
     // setTimeout(() => RED.comms.publish('debug', {msg:1}), 10000);
     const node: NodeRedNodes.IThisNode = this;
@@ -52,7 +52,7 @@ const nodeFactory : NodeRedNodes.NodeRegistration = function(RED: NodeRedNodes.I
     }
   }
 
-  RED.nodes.registerType("current-scene",Node);
+  RED.nodes.registerType("current-scene", CurrentSceneNode);
 };
 
-export = nodeFactory;
+export = registerCurrentSceneNode;

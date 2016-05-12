@@ -4,6 +4,8 @@
   "main": "lib/index.js",
   "typings": "src/lib/index",
   "scripts": {
+    "build": "tsc",
+    "builddocs": "typedoc --out ./out/docs/ --mode file --includeDeclarations --excludeExternals tsconfig.json",
     "prepublish": "tsc",
     "postinstall": "typings install && tsc",
     "test": "mocha --recursive"
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "mocha": "^2.4.5",
+    "typedoc": "sierrasoftworks/typedoc#v1.8.10",
     "typescript": "^1.8.10",
     "typings": "^0.8.1"
   },

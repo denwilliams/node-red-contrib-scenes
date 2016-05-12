@@ -1,4 +1,4 @@
-const nodeFactory : NodeRedNodes.NodeRegistration = (RED: NodeRedNodes.IRed) => {
+function registerStartStopSceneNode(RED: NodeRedNodes.IRed) {
   // const thisNodeFactory: IThisNodeFactory = this;
   // const globalContext: IGlobalContext = thisNodeFactory.context().global;
   // const scene : ISceneManager = globalContext.get('scene');
@@ -15,7 +15,7 @@ const nodeFactory : NodeRedNodes.NodeRegistration = (RED: NodeRedNodes.IRed) => 
   //   });
   // }
 
-  function initStartNode(config: any) {
+  function SceneStartNode(config: any) {
     const node: NodeRedNodes.IThisNode = this;
     RED.nodes.createNode(node, config);
 
@@ -38,7 +38,7 @@ const nodeFactory : NodeRedNodes.NodeRegistration = (RED: NodeRedNodes.IRed) => 
     }
   }
 
-  function initStopNode(config: any) {
+  function SceneStopNode(config: any) {
     console.log('NODE scene startstop');
     const node: NodeRedNodes.IThisNode = this;
     const globalContext: NodeRedNodes.IGlobalContext = this.context().global;
@@ -64,8 +64,8 @@ const nodeFactory : NodeRedNodes.NodeRegistration = (RED: NodeRedNodes.IRed) => 
     }
   }
 
-  RED.nodes.registerType("scene start", initStartNode);
-  RED.nodes.registerType("scene stop", initStopNode);
+  RED.nodes.registerType("scene start", SceneStartNode);
+  RED.nodes.registerType("scene stop", SceneStopNode);
 };
 
-export = nodeFactory;
+export = registerStartStopSceneNode;

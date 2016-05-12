@@ -7,6 +7,7 @@ import { join } from 'path';
 import * as when from 'when';
 import * as fs from 'fs';
 
+/** @hidden */
 const DEFAULT_FLOWS_DIR: string = join(__dirname, '../flows/');
 
 class NodeREDLauncher {

@@ -1,5 +1,5 @@
-const nodeFactory : NodeRedNodes.NodeRegistration = (RED: NodeRedNodes.IRed) => {
-  function initNode(config: any) {
+function registerSetSceneNode(RED: NodeRedNodes.IRed) {
+  function SetSceneNode(config: any) {
     console.log('NODE scene');
     const node: NodeRedNodes.IThisNode = this;
     RED.nodes.createNode(this, config);
@@ -17,7 +17,7 @@ const nodeFactory : NodeRedNodes.NodeRegistration = (RED: NodeRedNodes.IRed) => 
     });
   }
 
-  RED.nodes.registerType('scene', initNode);
+  RED.nodes.registerType('scene', SetSceneNode);
 };
 
-export = nodeFactory;
+export = registerSetSceneNode;

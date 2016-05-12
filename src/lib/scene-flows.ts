@@ -1,15 +1,15 @@
 'use strict';
 
-const COMMON_DEFAULT = [
-  { type: 'tab', id: 'tab.common', label: 'Common' }
-];
-
 import * as fs from 'fs';
 import {join} from 'path';
 import {EventEmitter} from 'events';
 import * as NodeRED from 'node-red-interfaces';
 
 export class SceneFlows extends EventEmitter implements NodeRED.IRuntimeFlowConfig {
+  static COMMON_DEFAULT = [
+    { type: 'tab', id: 'tab.common', label: 'Common' }
+  ];
+
   private _logger: NodeRedScenes.ILogger;
   private _flows: NodeRedScenes.HashTable<any>;
   private _flowsPath: string;
@@ -46,7 +46,7 @@ export class SceneFlows extends EventEmitter implements NodeRED.IRuntimeFlowConf
       { type: 'current-scene', id: 'current-scene.'+this._selected, name:'', x:75, y:20, z:'tab.'+this._selected, wires:[]}
     ];
 
-    var common = this._flows['common'] || COMMON_DEFAULT;
+    var common = this._flows['common'] || SceneFlows.COMMON_DEFAULT;
 
     f = f.concat(common);
 

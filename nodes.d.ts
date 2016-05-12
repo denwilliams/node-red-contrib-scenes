@@ -44,7 +44,7 @@ declare module NodeRedNodes {
     payload: any
   }
 
-  type NodeRegistration = (RED: IRed) => void
+  // type NodeRegistration = (RED: IRed) => void
   type NodeInitializer = (config: any) => void
   type MessageCallback = (msg: IMessage) => void
 
