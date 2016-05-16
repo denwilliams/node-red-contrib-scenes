@@ -17,7 +17,7 @@ npm run builddocs || exit 1
 
 # git remote update
 # git fetch
-git checkout -t -b origin/gh-pages origin/feature/foo
+git checkout -t -b gh-pages origin/gh-pages
 # git checkout gh-pages || exit 1
 
 mkdir doc
