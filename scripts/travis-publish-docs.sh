@@ -15,9 +15,9 @@ echo "Deploying github pages for $rev"
 git stash
 npm run builddocs || exit 1
 
-git remote update
-git fetch
-git checkout --track origin/gh-pages
+# git remote update
+# git fetch
+git checkout -t -b origin/gh-pages origin/feature/foo
 # git checkout gh-pages || exit 1
 
 mkdir doc
