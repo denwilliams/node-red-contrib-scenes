@@ -14,7 +14,7 @@ echo "Deploying github pages for $rev"
 
 git stash
 npm run builddocs || exit 1
-git fetch gh-pages || exit 1
+git fetch || exit 1
 git checkout gh-pages || exit 1
 mkdir doc
 # cp -R out/docs/ doc || exit 1
