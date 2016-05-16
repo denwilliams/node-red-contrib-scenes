@@ -1,10 +1,10 @@
 language: node_js
 node_js:
   - '5'
-  - '4'
-  - '4.0'
-  - '0.12'
-  - '0.10'
+  # - '4'
+  # - '4.0'
+  # - '0.12'
+  # - '0.10'
 env:
   global:
     secure: eQpYF843dpW6vk8cTBvu99XiUN42giZm2vqxl+QVVcrZ+gkyK0BwxdtiNljIhF7fZXrU+JPyYFwHdvCG0VYF3M85Wdw/CU+7cz2Bu93B53X9fhqdahR+8cX490SD4UzFkdma/6F9s2K4EzhF1dekQod3gOGiUqc15jjoMb7GT3ZTxY9IM/5rATpItQngGQ/dP9mvXFnbOSCvMUxGhOiiF0DkwfgHBiDiGlapYN0nhMpVRXjwR378Ua83/AOdQr75LQYJ4FhQsWS1U5VKLhUSrrmbYm1mI51AMxrARg5y8vpVRcsqzX3RAMg+BZ/3/s3oPk0TAjXyC1vKI4gsNuE6I1KbQUIL/lDBKnlt2ncjqAU96mdMI3hJQgKjNmd6mwgbWqEdTQUNdsyHJAnElfZcrN56Vaevxn4TcO+mRPn9DGngiYqW2+wHvnvcLCr0gqGLEOvK8u447plgesjCSsW8ImDmYGXReWe/4dAJcMCUhhQUbp7bRcYjYe62yO7aKA79VWX5o20Uw0FOZxKazjX6qW1ALLIGowAW9w/qRS8DhQjrX8Hzo31463OlVNGNIqpfWmxov4Fftln1rCddU2CRpuWYCfAV9tMcIR+uPEnNlE3l8EOPOYxbpsqywJCwphlq9sJswL3rJPeSBdBZYg1dFtiwKpIP534hID23GsaqsoM=

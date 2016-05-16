@@ -10,4 +10,4 @@ fi
 
 rev=$(git rev-parse --short HEAD)
 
-./publish-docs.sh
+./scripts/publish-docs.sh
