@@ -10,6 +10,8 @@ fi
 
 rev=$(git rev-parse --short HEAD)
 
+npm run builddocs || exit 1
+
 cd out/
 
 git init
