@@ -14,8 +14,12 @@ echo "Deploying github pages for $rev"
 
 git stash
 npm run builddocs || exit 1
-git fetch || exit 1
-git checkout gh-pages || exit 1
+
+git remote update
+git fetch
+git checkout --track origin/gh-pages
+# git checkout gh-pages || exit 1
+
 mkdir doc
 # cp -R out/docs/ doc || exit 1
 mv out/docs/ doc/$(node -e "console.log(require('./package').version)") || exit 1
