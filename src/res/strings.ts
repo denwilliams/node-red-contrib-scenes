@@ -1,5 +1,0 @@
-module Strings {
-  
-}
-
-export = Strings;
