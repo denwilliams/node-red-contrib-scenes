@@ -15,7 +15,10 @@ them with another "scene" set.
 I originally wrote (hacked) this a couple of years ago when Node RED was quite
 new for [homenet](https://github.com/denwilliams/homenet-core). It actually turned
 out to be the most valuable part of homenet so it made sense to separate it out
-into its own component.
+into its own component. The Node RED internals aren't the easiest to reverse engineer
+and pretty scarce on comments, though there website actually has a few docs on
+interfaces now. Re-implementing using Typescript makes it easy to check the custom
+implementations match the documented interfaces.
 
 ## How Does It All Work?
 
