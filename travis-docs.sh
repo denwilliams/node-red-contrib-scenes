@@ -22,6 +22,7 @@ git config user.email "work@denwilliams.net"
 git remote add upstream "https://$GH_TOKEN@github.com/denwilliams/node-red-contrib-scenes.git"
 git fetch upstream
 # git reset upstream/gh-pages
+git checkout gh-pages
 git pull
 
 mv out/docs gh-pages/$(node -e "console.log(require('./package').version)") || exit 1
