@@ -12,4 +12,6 @@ var nrScenes = require('node-red-contrib-scenes');
 nrScenes.start(RED, {port:3210});
 ```
 
+To run from the command line use https://github.com/denwilliams/node-red-contrib-scenes-exec
+
 ## [Documentation](http://www.denwilliams.net/node-red-contrib-scenes/0.1.1/)
