@@ -9,7 +9,7 @@ Scenes for Node RED
 ```js
 var RED = require('node-red');
 var nrScenes = require('node-red-contrib-scenes');
-nrScenes.start(RED, {port:3210});
+nrScenes.start(RED, {port:1880});
 ```
 
 To run from the command line use https://github.com/denwilliams/node-red-contrib-scenes-exec
