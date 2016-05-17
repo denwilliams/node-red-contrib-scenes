@@ -12,7 +12,8 @@ rev=$(git rev-parse --short HEAD)
 
 npm run builddocs || exit 1
 
-cd out/
+mkdir gh-pages
+cd gh-pages
 
 git init
 git config user.name "Den Williams"
@@ -20,7 +21,10 @@ git config user.email "work@denwilliams.net"
 
 git remote add upstream "https://$GH_TOKEN@github.com/denwilliams/node-red-contrib-scenes.git"
 git fetch upstream
-git reset upstream/gh-pages
+# git reset upstream/gh-pages
+git pull
+
+mv out/docs gh-pages/$(node -e "console.log(require('./package').version)") || exit 1
 
 touch .
 
