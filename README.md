@@ -39,6 +39,15 @@ The `scene-start` node is triggered after the scene has been loaded and started.
 
 The `scene-stop` node is triggered before the scene is stopped in preparation for loading the next scene.
 
+## Common (Shared) Tabs
+
+The provided scene manager and storage have a concept of shared or "common" tabs.
+These tabs will be available on *every* scene.
+
+To create a shared tab, when you create a new tab prefix it with `common`. By default
+when a new scene is created there is always a shared tab called `Common` and a
+new tab named the same as the scene. Any tab that is *not* prefixed with `common`
+will not be shared.
 
 ## Use
 
