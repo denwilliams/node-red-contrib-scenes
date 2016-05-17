@@ -25,6 +25,7 @@ git fetch upstream
 git checkout gh-pages
 git pull
 
+rm -rf $(node -e "console.log(require('../package').version)")
 mv ../out/docs ./$(node -e "console.log(require('../package').version)") || exit 1
 
 touch .
