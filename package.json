@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "mocha": "^2.4.5",
-    "typedoc": "sierrasoftworks/typedoc#v1.8.10",
+    "typedoc": "github:sierrasoftworks/typedoc#v1.8.10",
     "typescript": "^1.8.10",
     "typings": "^0.8.1"
   },
@@ -41,5 +41,9 @@
     "url": "https://github.com/denwilliams/node-red-contrib-scenes/issues"
   },
   "homepage": "https://github.com/denwilliams/node-red-contrib-scenes#readme",
-  "author": "Den Williams"
+  "author": "Den Williams",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  }
 }
