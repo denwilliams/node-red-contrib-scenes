@@ -5,7 +5,7 @@
   "typings": "src/lib/index",
   "scripts": {
     "build": "tsc",
-    "builddocs": "typedoc --out ./out/docs/ --mode file --includeDeclarations --excludeExternals tsconfig.json",
+    "builddocs": "typedoc --out ./out/docs/ --readme DOCS.md --mode file --includeDeclarations --excludeExternals tsconfig.json",
     "prepublish": "tsc",
     "postinstall": "typings install && tsc",
     "test": "mocha --recursive"
