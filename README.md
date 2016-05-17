@@ -25,11 +25,12 @@ The `current-scene` node simply indicates if the scene that is loaded in the web
 UI is the same scene. When the scene changes it is not possible to refresh the UI
 automatically. This node indicates when it has changed.
 
-When the scene is the same as the loaded scene:
+When the scene is the same as the loaded scene the status indicator is blue:
 
 ![active scene](scene-day-active.png)
 
-When the scene is different than the loaded scene:
+When the scene is different than the loaded scene the status indicator is red and indicates the actual scene.
+When this happens you need to refresh the browser:
 
 ![inactive scene](scene-day-inactive.png)
 
