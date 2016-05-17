@@ -63,15 +63,21 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<h1 id="node-red-contrib-scenes">node-red-contrib-scenes</h1>
-				<p>Scenes for Node RED</p>
-				<p><a href="https://travis-ci.org/denwilliams/node-red-contrib-scenes"><img src="https://travis-ci.org/denwilliams/node-red-contrib-scenes.svg?branch=master" alt="Build Status"></a></p>
-				<h2 id="use">Use</h2>
+				<h1 id="node-red">Node RED</h1>
+				<p><strong>Note</strong>: <em>because NR Scenes is more than just a set of custom nodes (it requires a
+						custom storage implementation) it cannot be started from the command line using
+						the default <code>bin</code> script, but instead needs to be called via the <code>start</code> method.
+						I have opted not to include Node RED in the module, instead it must be injected.
+				This improves flexibility when integrating with an existing applications.</em></p>
+				<h2 id="basic-use">Basic Use</h2>
 				<pre><code class="lang-js"><span class="hljs-keyword">var</span> RED = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-red'</span>);
 <span class="hljs-keyword">var</span> nrScenes = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-red-contrib-scenes'</span>);
-nrScenes.start(RED, {port:<span class="hljs-number">3210</span>});
+nrScenes.start(RED, {port:<span class="hljs-number">1880</span>});
 </code></pre>
-				<h2 id="-documentation-http-www-denwilliams-net-node-red-contrib-scenes-0-1-0-"><a href="http://www.denwilliams.net/node-red-contrib-scenes/0.1.0/">Documentation</a></h2>
+				<p><a href="modules/startermodule.html#start">See this page</a> for more information on available
+				parameters and options.</p>
+				<h2 id="extended-use">Extended Use</h2>
+				<p>TBD</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
