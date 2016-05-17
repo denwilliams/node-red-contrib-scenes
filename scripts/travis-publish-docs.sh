@@ -22,7 +22,7 @@ git checkout -t -b gh-pages origin/gh-pages
 
 mkdir doc
 # cp -R out/docs/ doc || exit 1
-mv out/docs/ doc/$(node -e "console.log(require('./package').version)") || exit 1
+mv ../out/docs/ doc/$(node -e "console.log(require('./package').version)") || exit 1
 git add doc/ || exit 1
 git commit -m "Generate documentation for v$(node -e "console.log(require('./package').version)")"
 git push origin gh-pages
