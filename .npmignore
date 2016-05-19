@@ -42,3 +42,5 @@ typings/browser.d.ts
 # typings/main.d.ts
 
 gh-pages
+out/
+data/
