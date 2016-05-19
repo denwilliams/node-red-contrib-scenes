@@ -6,8 +6,7 @@
   "scripts": {
     "build": "tsc",
     "builddocs": "typedoc --out ./out/docs/ --readme DOCS.md --mode file --includeDeclarations --excludeExternals tsconfig.json",
-    "prepublish": "tsc",
-    "postinstall": "echo Don't forget to 'npm run tsinstall' too",
+    "prepublish": "typings install && tsc",
     "tsinstall": "typings install && tsc",
     "test": "mocha --recursive"
   },
