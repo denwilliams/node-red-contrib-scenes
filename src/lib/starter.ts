@@ -64,8 +64,8 @@ module StarterModule {
 
       let eventBus: any;
 
-      const app: express.Express = express(); // opts.app || express();
-      const server: http.Server = http.createServer(app);
+      const app: express.Express = opts.app || express(); // opts.app || express();
+      const server: http.Server = opts.server || http.createServer(app);
 
       sceneManager.onChanged((scene: string) => {
         flows.changeFlow(scene);
