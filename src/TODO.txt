@@ -4,3 +4,4 @@
 - Support authentication in settings
 - Handle server errors in starter
 - Loading custom nodes via code (not critical anymore since can load via package.json)
+- Clean up .d.ts files
