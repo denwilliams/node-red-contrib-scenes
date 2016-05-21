@@ -62,7 +62,6 @@ module Settings {
       //   ]
       // },
       set: function(what: any, data: any) {
-        // console.log('set', what, data);
         return when.resolve();
       },
       verbose: true,
@@ -74,7 +73,6 @@ module Settings {
           handler: function(settings: any) {
             return function(log: any) {
               logger.debug(log.msg);
-              // console.log(log.msg);
             }
           }
         }

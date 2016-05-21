@@ -12,11 +12,8 @@ import {createSettings} from './settings';
 module StarterModule {
   export function start(RED: IRuntime, opts: {
                           app?: express.Express,
-                          // app?: express.Router,
                           server?: http.Server,
-
                           // nodes: NodeRED.INode[],
-
                           config?: NodeRedScenes.IConfig,
                           sceneManager?: NodeRedScenes.ISceneManager,
                           storageModule?: SceneStorage,
@@ -27,7 +24,6 @@ module StarterModule {
                         } = {}) {
 
     const starter = new Starter(RED);
-    console.log('OPTS', opts);
     return starter.start(opts);
   }
 
@@ -43,11 +39,8 @@ module StarterModule {
     start(
       opts: {
         app?: express.Express,
-        // app?: express.Router,
         server?: http.Server,
-
         // nodes: NodeRED.INode[],
-
         config?: NodeRedScenes.IConfig,
         sceneManager?: NodeRedScenes.ISceneManager,
         storageModule?: SceneStorage,
@@ -64,7 +57,7 @@ module StarterModule {
 
       let eventBus: any;
 
-      const app: express.Express = opts.app || express(); // opts.app || express();
+      const app: express.Express = opts.app || express();
       const server: http.Server = opts.server || http.createServer(app);
 
       sceneManager.onChanged((scene: string) => {
@@ -80,29 +73,6 @@ module StarterModule {
         logger.info('Node RED flows have changed... reloading.');
         this.reload();
       });
-
-      // const launcher = new NodeREDLauncher(
-      //   RED,
-      //   opts.context,
-      //   flows,
-      //   storage,
-      //   app,
-      //   server,
-      //   opts.nodes,
-      //   opts.config,
-      //   opts.logger
-      // );
-
-      // return launcher.start()
-      // .then((res: any) => {
-      //   return {
-      //     changeScene(sceneId: string) {
-      //       flows.changeFlow(sceneId);
-      //     },
-      //     app,
-      //     server
-      //   };
-      // });
 
       return this._RED.start()
       .then(() => {
@@ -133,8 +103,6 @@ module StarterModule {
           server.listen(opts.port, null, () => {
             logger.info('Now listening on ' + opts.port);
           });
-          //
-          // server.listen(opts.port);
         }
 
         return {
@@ -153,20 +121,16 @@ module StarterModule {
      */
     reload() : void {
       this._logger.info('Stopping current Node RED flow...');
-      // this._RED.nodes.stopFlows();
+      // this._RED.nodes.stopFlows(); // dont need to do this any more
       this._RED.nodes.loadFlows();
 
-      if (this._reloadTimer) clearTimeout(this._reloadTimer);
+      // if (this._reloadTimer) clearTimeout(this._reloadTimer);
 
-      this._reloadTimer = setTimeout(() => {
+      // this._reloadTimer = setTimeout(() => {
         this._logger.info('Starting new Node RED flow...');
-        try {
-          // this._RED.nodes.loadFlows();
-          // this._RED.nodes.startFlows();
-        } catch(err) {
-          this._logger.error(err.message + ' >> \n' + err.stack);
-        }
-      }, 1000);
+        // this._RED.nodes.loadFlows();
+        // this._RED.nodes.startFlows();
+      // }, 1000);
     }
   }
 }

@@ -1,23 +1,6 @@
 function registerCurrentSceneNode(RED: NodeRedNodes.IRed) {
-  // const thisNodeFactory: IThisNodeFactory = this;
-  // console.log('thisNodeFactory', typeof thisNodeFactory, thisNodeFactory);
-//  const globalContext: IGlobalContext = thisNodeFactory.context().global;
-//  const scene : ISceneManager = globalContext.get('scene');
-  //
-  // function createNode(config: any) {
-  //   const node: IThisNode = this;
-  //
-  //   RED.nodes.createNode(node, config);
-  //   const sceneId = config.sceneId;
-  //
-  //   node.on('input', function(msg: IMessage) {
-  //     const id: String = sceneId || msg.payload;
-  //     scene.set(id);
-  //   });
-  // }
 
   function CurrentSceneNode(config: any) {
-    console.log('NODE scene current', config.id);
     // setTimeout(() => RED.comms.publish('debug', {msg:1}), 10000);
     const node: NodeRedNodes.IThisNode = this;
     RED.nodes.createNode(this, config);
@@ -48,7 +31,6 @@ function registerCurrentSceneNode(RED: NodeRedNodes.IRed) {
         shape: 'dot',
         text: newScene
       });
-      console.log('update status', node.id, color);
     }
   }
 

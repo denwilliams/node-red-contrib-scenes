@@ -43,7 +43,7 @@ export class SceneStorage implements NodeRED.IStorageApi {
 	}
 
 	saveSettings(settings: NodeRED.ISettings) : When.Promise<any> {
-		console.log(settings);
+		// console.log(settings);
     return null;
 	}
 
@@ -56,7 +56,7 @@ export class SceneStorage implements NodeRED.IStorageApi {
 	}
 
 	saveFlow(fn: any, data: any) {
-		console.log(fn, data);
+		// console.log(fn, data);
 	}
 
   getSessions() : When.Promise<NodeRED.ISessions> {
@@ -72,10 +72,10 @@ export class SceneStorage implements NodeRED.IStorageApi {
       case 'flows':
         return this.getAllFlows();
     }
-    console.log('getLibraryEntry', type, path);
+    // console.log('getLibraryEntry', type, path);
 	}
 
 	saveLibraryEntry(type: string, path: string, meta: any, body: any) {
-		console.log(type, path, meta, body);
+		// console.log(type, path, meta, body);
 	}
 }

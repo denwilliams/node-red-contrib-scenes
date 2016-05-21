@@ -1,0 +1,6 @@
+- Move strings to res
+- Allow custom palette categories in settings
+- Fix logger wrapper in settings (currently only debug)
+- Support authentication in settings
+- Handle server errors in starter
+- Loading custom nodes via code (not critical anymore since can load via package.json)

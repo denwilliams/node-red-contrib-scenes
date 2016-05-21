@@ -39,7 +39,6 @@ function registerStartStopSceneNode(RED: NodeRedNodes.IRed) {
   }
 
   function SceneStopNode(config: any) {
-    console.log('NODE scene startstop');
     const node: NodeRedNodes.IThisNode = this;
     const globalContext: NodeRedNodes.IGlobalContext = this.context().global;
     const scene : NodeRedScenes.ISceneManager = globalContext.get('scene');
