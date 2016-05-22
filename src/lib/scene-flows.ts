@@ -1,4 +1,4 @@
-'use strict';
+/// <reference path="../def/index.d.ts"/>
 
 import {existsSync, readFileSync, writeFileSync} from 'fs';
 import {join} from 'path';
@@ -10,13 +10,13 @@ export class SceneFlows extends EventEmitter implements NodeRED.IRuntimeFlowConf
     { type: 'tab', id: 'tab.common', label: 'Common' }
   ];
 
-  private _logger: NodeRedScenes.ILogger;
-  private _flows: NodeRedScenes.HashTable<any>;
+  private _logger: NodeRed.Scenes.ILogger;
+  private _flows: NodeRed.Scenes.HashTable<any>;
   private _flowsPath: string;
   private _timeout: NodeJS.Timer;
   private _selected: string;
 
-  constructor(config: NodeRedScenes.IConfig, logger: NodeRedScenes.ILogger) {
+  constructor(config: NodeRed.Scenes.IConfig, logger: NodeRed.Scenes.ILogger) {
     super();
 
     const self = this;

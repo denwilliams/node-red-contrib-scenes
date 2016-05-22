@@ -1,3 +1,5 @@
+/// <reference path="../def/index.d.ts"/>
+
 //import * as NodeRED from 'node-red-interfaces';
 import {IRuntime, IStorageApi, IRuntimeFlowConfig} from 'node-red-interfaces';
 import * as http from 'http';
@@ -14,12 +16,12 @@ module StarterModule {
                           app?: express.Express,
                           server?: http.Server,
                           // nodes: NodeRED.INode[],
-                          config?: NodeRedScenes.IConfig,
-                          sceneManager?: NodeRedScenes.ISceneManager,
+                          config?: NodeRed.Scenes.IConfig,
+                          sceneManager?: NodeRed.Scenes.ISceneManager,
                           storageModule?: SceneStorage,
                           globalContext?: any,
                           flows?: SceneFlows,
-                          logger?: NodeRedScenes.ILogger,
+                          logger?: NodeRed.Scenes.ILogger,
                           port?: number
                         } = {}) {
 
@@ -29,7 +31,7 @@ module StarterModule {
 
   export class Starter {
     private _RED: IRuntime;
-    private _logger: NodeRedScenes.ILogger;
+    private _logger: NodeRed.Scenes.ILogger;
     private _reloadTimer: NodeJS.Timer;
 
     constructor(RED: IRuntime) {
@@ -41,12 +43,12 @@ module StarterModule {
         app?: express.Express,
         server?: http.Server,
         // nodes: NodeRED.INode[],
-        config?: NodeRedScenes.IConfig,
-        sceneManager?: NodeRedScenes.ISceneManager,
+        config?: NodeRed.Scenes.IConfig,
+        sceneManager?: NodeRed.Scenes.ISceneManager,
         storageModule?: SceneStorage,
         globalContext?: any,
         flows?: SceneFlows,
-        logger?: NodeRedScenes.ILogger,
+        logger?: NodeRed.Scenes.ILogger,
         port?: number
       } = {}) {
 

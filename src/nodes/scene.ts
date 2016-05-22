@@ -1,15 +1,17 @@
-function registerSetSceneNode(RED: NodeRedNodes.IRed) {
+/// <reference path="../def/index.d.ts"/>
+
+function registerSetSceneNode(RED: NodeRed.Nodes.IRed) {
   function SetSceneNode(config: any) {
-    const node: NodeRedNodes.IThisNode = this;
+    const node: NodeRed.Nodes.IThisNode = this;
     RED.nodes.createNode(this, config);
 
     const flowContext: any = this.context().flow;
-    let globalContext: NodeRedNodes.IGlobalContext = this.context().global;
-    const scene : NodeRedScenes.ISceneManager = globalContext.get('scene');
+    let globalContext: NodeRed.Nodes.IGlobalContext = this.context().global;
+    const scene : NodeRed.Scenes.ISceneManager = globalContext.get('scene');
 
     const sceneId = config.sceneId;
 
-    node.on('input', function(msg: NodeRedNodes.IMessage) {
+    node.on('input', function(msg: NodeRed.Nodes.IMessage) {
       const id: String = sceneId || msg.payload;
       scene.set(id);
     });

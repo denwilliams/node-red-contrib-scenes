@@ -1,14 +1,16 @@
-function registerCurrentSceneNode(RED: NodeRedNodes.IRed) {
+/// <reference path="../def/index.d.ts"/>
+
+function registerCurrentSceneNode(RED: NodeRed.Nodes.IRed) {
 
   function CurrentSceneNode(config: any) {
     // setTimeout(() => RED.comms.publish('debug', {msg:1}), 10000);
-    const node: NodeRedNodes.IThisNode = this;
+    const node: NodeRed.Nodes.IThisNode = this;
     RED.nodes.createNode(this, config);
 
     const flowContext: any = this.context().flow;
-    let globalContext: NodeRedNodes.IGlobalContext = this.context().global;
+    let globalContext: NodeRed.Nodes.IGlobalContext = this.context().global;
 
-    const scene : NodeRedScenes.ISceneManager = globalContext.get('scene');
+    const scene : NodeRed.Scenes.ISceneManager = globalContext.get('scene');
 
     node.status({ fill:"green", shape:"dot", text:"connected" });
 

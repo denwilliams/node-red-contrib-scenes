@@ -1,4 +1,6 @@
-function registerStartStopSceneNode(RED: NodeRedNodes.IRed) {
+/// <reference path="../def/index.d.ts"/>
+
+function registerStartStopSceneNode(RED: NodeRed.Nodes.IRed) {
   // const thisNodeFactory: IThisNodeFactory = this;
   // const globalContext: IGlobalContext = thisNodeFactory.context().global;
   // const scene : ISceneManager = globalContext.get('scene');
@@ -16,11 +18,11 @@ function registerStartStopSceneNode(RED: NodeRedNodes.IRed) {
   // }
 
   function SceneStartNode(config: any) {
-    const node: NodeRedNodes.IThisNode = this;
+    const node: NodeRed.Nodes.IThisNode = this;
     RED.nodes.createNode(node, config);
 
-    const globalContext: NodeRedNodes.IGlobalContext = this.context().global;
-    const scene : NodeRedScenes.ISceneManager = globalContext.get('scene');
+    const globalContext: NodeRed.Nodes.IGlobalContext = this.context().global;
+    const scene : NodeRed.Scenes.ISceneManager = globalContext.get('scene');
 
     // send a message 500ms after init
     var t = setTimeout(init, 500);
@@ -39,9 +41,9 @@ function registerStartStopSceneNode(RED: NodeRedNodes.IRed) {
   }
 
   function SceneStopNode(config: any) {
-    const node: NodeRedNodes.IThisNode = this;
-    const globalContext: NodeRedNodes.IGlobalContext = this.context().global;
-    const scene : NodeRedScenes.ISceneManager = globalContext.get('scene');
+    const node: NodeRed.Nodes.IThisNode = this;
+    const globalContext: NodeRed.Nodes.IGlobalContext = this.context().global;
+    const scene : NodeRed.Scenes.ISceneManager = globalContext.get('scene');
     RED.nodes.createNode(node, config);
 
     scene.onChanged(init);

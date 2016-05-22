@@ -1,3 +1,5 @@
+/// <reference path="../def/index.d.ts"/>
+
 import * as NodeRED from 'node-red-interfaces';
 import * as when from 'when';
 import {SceneManager} from './scene-manager';
@@ -10,31 +12,31 @@ import {join} from 'path';
 module Settings {
   export function createSettings(
         opts: {
-          config?: NodeRedScenes.IConfig,
-          sceneManager?: NodeRedScenes.ISceneManager,
+          config?: NodeRed.Scenes.IConfig,
+          sceneManager?: NodeRed.Scenes.ISceneManager,
           storageModule?: SceneStorage,
           globalContext?: any,
           flows?: SceneFlows,
-          logger?: NodeRedScenes.ILogger
+          logger?: NodeRed.Scenes.ILogger
         })
         : {
           settings: NodeRED.ISettings,
           flows: SceneFlows,
-          scenes: NodeRedScenes.ISceneManager,
-          config: NodeRedScenes.IConfig,
-          logger: NodeRedScenes.ILogger
+          scenes: NodeRed.Scenes.ISceneManager,
+          config: NodeRed.Scenes.IConfig,
+          logger: NodeRed.Scenes.ILogger
         } {
 
-    const defaultConfig: NodeRedScenes.IConfig = {
+    const defaultConfig: NodeRed.Scenes.IConfig = {
       nodesDir: join(__dirname, '../nodes/'),
       userDir: join(__dirname, '../data/'),
       initialFlow: 'default',
       redUrl: '/',
       redApiUrl: '/api'
     };
-    const config: NodeRedScenes.IConfig = opts.config || defaultConfig;
-    const logger: NodeRedScenes.ILogger = opts.logger || new ConsoleLogger();
-    const scenes: NodeRedScenes.ISceneManager = opts.sceneManager || new SceneManager();
+    const config: NodeRed.Scenes.IConfig = opts.config || defaultConfig;
+    const logger: NodeRed.Scenes.ILogger = opts.logger || new ConsoleLogger();
+    const scenes: NodeRed.Scenes.ISceneManager = opts.sceneManager || new SceneManager();
     const functionGlobalContext: any = opts.globalContext || {};
     const flows: SceneFlows = opts.flows || new SceneFlows(config, logger);
     const storageModule: SceneStorage = opts.storageModule || new SceneStorage(flows, opts.logger);

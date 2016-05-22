@@ -1,3 +1,5 @@
+/// <reference path="../def/index.d.ts"/>
+
 /**
  * Custom storage module for Node-RED
  * @module nodeRedStorage
@@ -9,9 +11,9 @@ import * as NodeRED from 'node-red-interfaces';
 export class SceneStorage implements NodeRED.IStorageApi {
 
   private _nodeRedFlows : any;
-  private _logger : NodeRedScenes.ILogger;
+  private _logger : NodeRed.Scenes.ILogger;
 
-  constructor(nodeRedFlows: any, logger: NodeRedScenes.ILogger) {
+  constructor(nodeRedFlows: any, logger: NodeRed.Scenes.ILogger) {
     this._nodeRedFlows = nodeRedFlows;
     this._logger = logger;
   }

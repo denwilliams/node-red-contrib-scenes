@@ -1,4 +1,6 @@
-export class ConsoleLogger implements NodeRedScenes.ILogger {
+/// <reference path="../def/index.d.ts"/>
+
+export class ConsoleLogger implements NodeRed.Scenes.ILogger {
   debug(msg: any) : void {
     console.log('d>', msg);
   }
