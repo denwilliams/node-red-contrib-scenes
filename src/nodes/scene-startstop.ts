@@ -1,5 +1,3 @@
-/// <reference path="../def/index.d.ts"/>
-
 function registerStartStopSceneNode(RED: NodeRed.Nodes.IRed) {
   // const thisNodeFactory: IThisNodeFactory = this;
   // const globalContext: IGlobalContext = thisNodeFactory.context().global;

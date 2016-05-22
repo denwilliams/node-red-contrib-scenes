@@ -1,5 +1,3 @@
-/// <reference path="../def/index.d.ts"/>
-
 function registerSetSceneNode(RED: NodeRed.Nodes.IRed) {
   function SetSceneNode(config: any) {
     const node: NodeRed.Nodes.IThisNode = this;

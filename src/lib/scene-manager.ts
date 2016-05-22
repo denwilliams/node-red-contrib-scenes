@@ -1,5 +1,3 @@
-/// <reference path="../def/index.d.ts"/>
-
 import {EventEmitter} from 'events';
 
 export class SceneManager extends EventEmitter implements NodeRed.Scenes.ISceneManager {

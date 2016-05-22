@@ -13,12 +13,14 @@
     "outDir": "./"
   },
   "filesGlob": [
+    "src/def/index.d.ts",
     "src/lib/**/*.ts",
     "src/nodes/**/*.ts",
     "src/res/**/*.ts",
     "src/test/**/*.ts"
   ],
   "files": [
+    "src/def/index.d.ts",
     "src/lib/console-logger.d.ts",
     "src/lib/console-logger.ts",
     "src/lib/index.d.ts",

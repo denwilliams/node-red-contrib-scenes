@@ -1,7 +1,5 @@
 // import * as RED from 'node-red';
 
-/// <reference path="../def/index.d.ts"/>
-
 import * as NodeRED from 'node-red-interfaces';
 
 import * as express from 'express';

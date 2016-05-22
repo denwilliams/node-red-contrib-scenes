@@ -91,6 +91,3 @@ declare module 'node-red' {
   var RED: NodeRED.IRuntime;
   export = RED;
 }
-
-
-/// <reference path="../node_modules/inversify/type_definitions/inversify.d.ts"/>

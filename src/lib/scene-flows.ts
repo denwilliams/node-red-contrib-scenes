@@ -1,5 +1,3 @@
-/// <reference path="../def/index.d.ts"/>
-
 import {existsSync, readFileSync, writeFileSync} from 'fs';
 import {join} from 'path';
 import {EventEmitter} from 'events';

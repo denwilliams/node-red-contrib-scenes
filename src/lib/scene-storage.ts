@@ -1,5 +1,3 @@
-/// <reference path="../def/index.d.ts"/>
-
 /**
  * Custom storage module for Node-RED
  * @module nodeRedStorage

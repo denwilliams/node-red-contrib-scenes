@@ -1,5 +1,3 @@
-/// <reference path="../def/index.d.ts"/>
-
 import * as NodeRED from 'node-red-interfaces';
 import * as when from 'when';
 import {SceneManager} from './scene-manager';

@@ -1,5 +1,3 @@
-/// <reference path="../def/index.d.ts"/>
-
 function registerCurrentSceneNode(RED: NodeRed.Nodes.IRed) {
 
   function CurrentSceneNode(config: any) {
