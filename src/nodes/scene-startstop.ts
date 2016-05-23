@@ -1,19 +1,4 @@
 function registerStartStopSceneNode(RED: NodeRed.Nodes.IRed) {
-  // const thisNodeFactory: IThisNodeFactory = this;
-  // const globalContext: IGlobalContext = thisNodeFactory.context().global;
-  // const scene : ISceneManager = globalContext.get('scene');
-
-  // function createNode(config: any) {
-  //   const node: IThisNode = this;
-  //
-  //   RED.nodes.createNode(node, config);
-  //   const sceneId = config.sceneId;
-  //
-  //   node.on('input', function(msg: IMessage) {
-  //     const id: String = sceneId || msg.payload;
-  //     scene.set(id);
-  //   });
-  // }
 
   function SceneStartNode(config: any) {
     const node: NodeRed.Nodes.IThisNode = this;
@@ -40,9 +25,10 @@ function registerStartStopSceneNode(RED: NodeRed.Nodes.IRed) {
 
   function SceneStopNode(config: any) {
     const node: NodeRed.Nodes.IThisNode = this;
+    RED.nodes.createNode(node, config);
+
     const globalContext: NodeRed.Nodes.IGlobalContext = this.context().global;
     const scene : NodeRed.Scenes.ISceneManager = globalContext.get('scene');
-    RED.nodes.createNode(node, config);
 
     scene.onChanged(init);
     var currScene = scene.getCurrentId();
