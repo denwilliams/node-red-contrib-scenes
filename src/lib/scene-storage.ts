@@ -39,7 +39,7 @@ export class SceneStorage implements NodeRED.IStorageApi {
 	getCredentials() {
 		const credentials = existsSync(this._credentialsPath)
 			? JSON.parse(readFileSync(this._credentialsPath, 'utf8'))
-			: null;
+			: {};
     return when.resolve(credentials);;
 	}
 
@@ -51,7 +51,7 @@ export class SceneStorage implements NodeRED.IStorageApi {
 	getSettings() : When.Promise<NodeRED.ISettings> {
 		const settings = existsSync(this._settingsPath)
 			? JSON.parse(readFileSync(this._settingsPath, 'utf8'))
-			: null;
+			: {};
     return when.resolve(settings);;
 	}
 
@@ -75,7 +75,7 @@ export class SceneStorage implements NodeRED.IStorageApi {
   getSessions() : When.Promise<NodeRED.ISessions> {
 		const sessions = existsSync(this._sessionsPath)
 			? JSON.parse(readFileSync(this._sessionsPath, 'utf8'))
-			: null;
+			: {};
     return when.resolve(sessions);;
   }
 
