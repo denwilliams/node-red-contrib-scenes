@@ -1,12 +1,16 @@
 language: node_js
 node_js:
-  - '6'
-  # - '4'
-  # - '4.0'
-  # - '0.12'
-  # - '0.10'
+- '6'
 env:
   global:
     secure: eQpYF843dpW6vk8cTBvu99XiUN42giZm2vqxl+QVVcrZ+gkyK0BwxdtiNljIhF7fZXrU+JPyYFwHdvCG0VYF3M85Wdw/CU+7cz2Bu93B53X9fhqdahR+8cX490SD4UzFkdma/6F9s2K4EzhF1dekQod3gOGiUqc15jjoMb7GT3ZTxY9IM/5rATpItQngGQ/dP9mvXFnbOSCvMUxGhOiiF0DkwfgHBiDiGlapYN0nhMpVRXjwR378Ua83/AOdQr75LQYJ4FhQsWS1U5VKLhUSrrmbYm1mI51AMxrARg5y8vpVRcsqzX3RAMg+BZ/3/s3oPk0TAjXyC1vKI4gsNuE6I1KbQUIL/lDBKnlt2ncjqAU96mdMI3hJQgKjNmd6mwgbWqEdTQUNdsyHJAnElfZcrN56Vaevxn4TcO+mRPn9DGngiYqW2+wHvnvcLCr0gqGLEOvK8u447plgesjCSsW8ImDmYGXReWe/4dAJcMCUhhQUbp7bRcYjYe62yO7aKA79VWX5o20Uw0FOZxKazjX6qW1ALLIGowAW9w/qRS8DhQjrX8Hzo31463OlVNGNIqpfWmxov4Fftln1rCddU2CRpuWYCfAV9tMcIR+uPEnNlE3l8EOPOYxbpsqywJCwphlq9sJswL3rJPeSBdBZYg1dFtiwKpIP534hID23GsaqsoM=
 after_success:
-  - bash travis-docs.sh
+- bash travis-docs.sh
+deploy:
+- provider: npm
+  email: work@denwilliams.net
+  api_key:
+    secure: IponFKkYDVlOzAgOYGrtTknobSC2XT0A5625RBKdvUZpSXt5fGw7Xom01OVj5vMVizdm/nPiMU4itgXoF6I6xEUbuWiiTalgueANY7c9eD0OwGtDrC8uvRyOvv17cstoPB5/554SJJjFxT+wgfRJfwHkyiSwIyNQ76RR8mSyJgeX7JJTHE+sWb4GCGkalJjl99fspuSaYDHk/Inc35gaPy3ZdQOYEPH5blLLjm/0iVa7pVl1w4O5nz46vzW1mAPL4EnRoYVy/MZAeO3On52FGN2Q3x19OcZn7dGzWeni27AhGSL6nG+7vuNQ+DtxG+CLJnN8CEDJsGVjEoNauCk6Vvm488YPM7HOuPJXPlhyS/Wj2e6KsZPnHW/jcI/AeexokLsSB76Nvi3hKc6oha6ATKQ68mRK7cLtf9Xpny40gwwT4uu9RAzAiZD2tvsnRIn4IpDYmF+OZgjJq9T26Mw/Qtj/rpXexQQYzu0SR5Emx/to23xaU4SyQCZGY6TXvkl4E9j8g+qL6BYmBs9bzn3jo0lMkb58YEW3c5tQ6SQEc+ib6UNEbaE3CV0mGbEcM6Ic2DRonW2qKNEUvCMsnv34gPY4SkeuI1fVX4Zw8hBp1hNZLec9N7HtPAm9h06hxpMooVerzVo8atZHySS1OSnDOzxOEhK2VbSpv8vtqu7c5Vc=
+  on:
+    tags: true
+    repo: denwilliams/node-red-contrib-scenes
