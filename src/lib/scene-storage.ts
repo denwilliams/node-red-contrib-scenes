@@ -5,15 +5,23 @@
 
 import * as when from 'when';
 import * as NodeRED from 'node-red-interfaces';
+import {existsSync, readFileSync, writeFileSync} from 'fs';
+import {join} from 'path';
 
 export class SceneStorage implements NodeRED.IStorageApi {
 
-  private _nodeRedFlows : any;
-  private _logger : NodeRed.Scenes.ILogger;
+  private _nodeRedFlows: any;
+	private _logger: NodeRed.Scenes.ILogger;
+	private _credentialsPath: string;
+	private _settingsPath: string;
+	private _sessionsPath: string;
 
-  constructor(nodeRedFlows: any, logger: NodeRed.Scenes.ILogger) {
+  constructor(nodeRedFlows: any, config: NodeRed.Scenes.IConfig, logger: NodeRed.Scenes.ILogger) {
     this._nodeRedFlows = nodeRedFlows;
-    this._logger = logger;
+		this._logger = logger;
+		this._credentialsPath = join(config.userDir, 'credentials.json');
+		this._settingsPath = join(config.userDir, 'settings.json');
+		this._sessionsPath = join(config.userDir, 'sessions.json');
   }
 
 	init(settings: any) {
@@ -29,22 +37,27 @@ export class SceneStorage implements NodeRED.IStorageApi {
 	}
 
 	getCredentials() {
-		return when.resolve({});
+		const credentials = existsSync(this._credentialsPath)
+			? JSON.parse(readFileSync(this._credentialsPath))
+			: null;
+    return when.resolve(credentials);;
 	}
 
 	saveCredentials(credentials: NodeRED.ICredentials) : When.Promise<any> {
-		this._logger.debug(credentials);
-    return null;
+    writeFileSync(this._credentialsPath, JSON.stringify(credentials));
+    return when.resolve(credentials);;
 	}
 
 	getSettings() : When.Promise<NodeRED.ISettings> {
-    const settings: NodeRED.ISettings = null;
-		return when.resolve(settings);
+		const settings = existsSync(this._settingsPath)
+			? JSON.parse(readFileSync(this._settingsPath))
+			: null;
+    return when.resolve(settings);;
 	}
 
 	saveSettings(settings: NodeRED.ISettings) : When.Promise<any> {
-		// console.log(settings);
-    return null;
+    writeFileSync(this._settingsPath, JSON.stringify(settings));
+    return when.resolve(settings);;
 	}
 
 	getAllFlows() {
@@ -60,11 +73,15 @@ export class SceneStorage implements NodeRED.IStorageApi {
 	}
 
   getSessions() : When.Promise<NodeRED.ISessions> {
-    return null;
+		const sessions = existsSync(this._sessionsPath)
+			? JSON.parse(readFileSync(this._sessionsPath))
+			: null;
+    return when.resolve(sessions);;
   }
 
   saveSessions(sessions: NodeRED.ISessions) : When.Promise<any> {
-    return null;
+    writeFileSync(this._sessionsPath, JSON.stringify(sessions));
+    return when.resolve(sessions);;
   }
 
 	getLibraryEntry(type: string, path: any) {

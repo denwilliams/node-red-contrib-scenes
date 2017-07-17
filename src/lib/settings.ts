@@ -37,7 +37,7 @@ module Settings {
     const scenes: NodeRed.Scenes.ISceneManager = opts.sceneManager || new SceneManager();
     const functionGlobalContext: any = opts.globalContext || {};
     const flows: SceneFlows = opts.flows || new SceneFlows(config, logger);
-    const storageModule: SceneStorage = opts.storageModule || new SceneStorage(flows, opts.logger);
+    const storageModule: SceneStorage = opts.storageModule || new SceneStorage(flows, config, opts.logger);
 
     functionGlobalContext.scene = scenes;
 
