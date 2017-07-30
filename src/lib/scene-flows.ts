@@ -70,7 +70,11 @@ export class SceneFlows extends EventEmitter implements NodeRED.IRuntimeFlowConf
     });
 
     data.forEach(function(item: any) {
-      if (commonTabs.indexOf(item.id) >= 0 || commonTabs.indexOf(item.z) >= 0) {
+      if (
+          commonTabs.indexOf(item.id) >= 0 || // this item IS the tab
+          commonTabs.indexOf(item.z) >= 0 || // this item belongs in the tab
+          item.z === '' // shared config items have a z of "" - we need these in common
+        ) {
         common.push(item);
       } else {
         current.push(item);
